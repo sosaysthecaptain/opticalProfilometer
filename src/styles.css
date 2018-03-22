@@ -2,6 +2,7 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
 
+/* PROBABLY DELETE THIS */
 body {
     padding-top: 5rem;
   }
@@ -9,3 +10,4 @@ body {
     padding: 3rem 1.5rem;
     text-align: center;
   }
+
