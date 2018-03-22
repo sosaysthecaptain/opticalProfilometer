@@ -8,10 +8,12 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
-
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CommandListComponent } from './components/command-list/command-list.component';
+import { DataService } from './services/data.service';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { CommandFormComponent } from './components/command-form/command-form.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAfQYpSeeC27ZJuAHIRtBdbCN63Zvfr9SE",
@@ -26,7 +28,9 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    CommandListComponent,
+    CommandFormComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,7 @@ export const firebaseConfig = {
     ModalModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [DataService, AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
