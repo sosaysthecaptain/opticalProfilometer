@@ -15,6 +15,7 @@ import { CommandListComponent } from './components/command-list/command-list.com
 import { DataService } from './services/data.service';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { CommandFormComponent } from './components/command-form/command-form.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAfQYpSeeC27ZJuAHIRtBdbCN63Zvfr9SE",
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     AppComponent,
     NavbarComponent,
     CommandListComponent,
-    CommandFormComponent
+    CommandFormComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
