@@ -4,8 +4,9 @@
     <div class="" *ngFor="let command of commands">
       <div class="card">
         <div class="card-header">
-          {{command.timeStamp}}
-          <span class="badge badge-success">{{command.status}}</span>
+          {{getFormattedDate(command)}}
+          <!-- <span class="badge badge-success" >{{command.status}}</span> -->
+          <span [ngClass]="setBadgeClass(command.status)">{{command.status}}</span>
         </div>
         <div class="card-body">
           <p class="card-text">{{command.body}}</p>

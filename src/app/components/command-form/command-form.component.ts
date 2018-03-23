@@ -12,7 +12,7 @@ export class CommandFormComponent implements OnInit {
   command: Command = {
     body: '',
     status: 'unread',
-    timeStamp: 0
+    timeStamp: ''
   }
 
   constructor(private dataService: DataService) { }
@@ -23,7 +23,7 @@ export class CommandFormComponent implements OnInit {
   onSubmit() {
     console.log('onSubmit firing. body: ');
     console.log(this.command.body);
-    this.command.timeStamp = Date.now();
+    this.command.timeStamp = new Date();
     this.dataService.addCommand(this.command);
     this.command.body = '';
   }

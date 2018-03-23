@@ -22,6 +22,20 @@ export class CommandListComponent implements OnInit {
   deleteCommand(event, command) {
     this.dataService.deleteCommand(command);
   }
+
+  getFormattedDate(command) {
+    return(command.timeStamp);
+  }
+
+  setBadgeClass(status) {
+    if(status == 'unread') {
+      return('badge badge-warning');
+    } else if(status == 'complete') {
+      return('badge badge-success');
+    } else {
+      return('badge badge-info');
+    }
+  }
 }
 
 
