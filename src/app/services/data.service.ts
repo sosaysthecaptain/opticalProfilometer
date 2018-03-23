@@ -28,6 +28,8 @@ export class DataService {
   }
 
   addCommand(item: Command) {
+    console.log('addCommand firing');
+    console.log('command to be added: ' + item.body);
     this.commandsCollection.add(item);
   }
 

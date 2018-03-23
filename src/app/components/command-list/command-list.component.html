@@ -5,11 +5,11 @@
       <div class="card">
         <div class="card-header">
           {{command.timeStamp}}
-          <span class="badge badge-success">complete</span>
+          <span class="badge badge-success">{{command.status}}</span>
         </div>
         <div class="card-body">
-          <p class="card-text">{{command.xRel}}</p>
-          <a href="#" class="btn btn-danger">Delete</a>
+          <p class="card-text">{{command.body}}</p>
+          <a (click)="deleteCommand($event, command)" class="btn btn-danger">Delete</a>
         </div>
       </div>
       <br>
